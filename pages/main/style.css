@@ -1364,3 +1364,10 @@ body {
 .visibility {
 	display: block;
 }
+
+@media (pointer: coarse) {
+	.slider__btn:hover {
+		border: 2px solid var(--color-dark-beige);
+		background-color: transparent;
+	}
+}
