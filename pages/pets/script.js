@@ -43,7 +43,8 @@ DARKNESS.addEventListener('click', closeMenu);
 
 // Modal
 
-import pets from "../pets.json" assert {type: "json"}
+const res = await fetch("../pets.json");
+const pets = await res.json();
 
 const FRIENDS_SLIDER = document.querySelector('.friends__list');
 
