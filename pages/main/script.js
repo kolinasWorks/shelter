@@ -1,7 +1,5 @@
 'use strict';
 
-const JSON_PETS = 'https://github.com/rolling-scopes-school/tasks/blob/master/tasks/markups/level-2/shelter/pets.json';
-
 const BODY = document.querySelector('.body');
 const NAV_BURGER = document.querySelector('.nav__burger');
 const HEADER_NAV = document.querySelector('.header__nav');
@@ -50,7 +48,8 @@ DARKNESS.addEventListener('click', closeMenu);
 
 // slider
 
-import pets from "../pets.json" assert {type: "json"}
+const res = await fetch("../pets.json");
+const pets = await res.json();
 
 const createCardTemplate = () => {
 	const card = document.createElement('li');
@@ -95,8 +94,6 @@ CARUSEL.addEventListener('animationend', (event) => {
 	for (const item of changedList.children) {
 		currentListPets.push(+item.dataset.modalBtn);
 	}
-
-	console.log(currentListPets)
 
 	for (const itemPets of currentListPets) {
 		let newPet = Math.floor(Math.random() * 8);
