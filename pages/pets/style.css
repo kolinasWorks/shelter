@@ -389,6 +389,13 @@ body {
 	border: 2px solid var(--color-beige);
 }
 
+@media (pointer: coarse) {
+	.pagination__btn:hover {
+		border: 2px solid var(--color-dark-beige);
+		background-color: transparent;
+	}
+}
+
 .pagination__btn_current,
 .pagination__btn_current:hover {
 	cursor: default;
